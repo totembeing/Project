@@ -1,0 +1,954 @@
+body, html {
+    height: 100%;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+/*Header ------------------------------------------------------------------------------------*/
+
+#header {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+#navBar {
+    flex: 1;
+    background-color: black;
+}
+
+#navBar > menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 5em;
+}
+
+#navBar > menu > li > a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+/*Underline animation*/
+#navBar > menu > li > a::before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 300ms ease;
+}
+
+#navBar > menu > li > a:hover::before {
+    transform: scaleX(1);
+}
+
+.navBarComp {
+    flex: 1;
+}
+
+#nameAndLogo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    font-size: 2.5em;
+    font-weight: 650;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Landing Page Main -------------------------------------------------------------------------*/
+
+#introText {
+    height: 3em;
+    margin-top: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: #6E6E73;
+    font-weight: 550;
+}
+
+#introText > p > span {
+    color: black;
+}
+
+#productsTemplate {
+    height: 15em;
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+.products > a { 
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    font-weight: 450;
+}
+
+.products > a {
+    text-decoration: none;
+    color: black;
+}
+
+.products > a > img {
+    height: 10em;
+    width: auto;
+}
+
+.products > a > p {
+    position: relative;
+}
+
+.products > a > p::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 200ms ease;
+}
+
+.products > a:hover p::before {
+    transform: scaleX(1);
+}
+
+#reviewsTitle {
+    height: 5em;
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#reviewsTitle > P {
+    font-size: 3em;
+    font-weight: 650;
+    border-bottom: 1px solid black;
+}
+
+#reviews {
+    margin-bottom: 2em;
+    height: 20em;
+    display: flex;
+    gap: 3em;
+    padding: 2em 3em 2em 3em;
+}
+
+.review {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewName {
+    flex: 1;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviewName > p {
+    letter-spacing: .1em;
+    font-weight: 550;
+}
+
+.reviewContent {
+    flex: 3.5;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.reviewContent > p {
+    font-style: italic;
+    line-height: 1.2em;
+}
+
+
+#services {
+    height: 25em;
+    background-color: black;
+    display: flex;
+    gap: 2em;
+    padding: 4em;
+}
+
+.service {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.service > P {
+    font-size: 1.3em;
+}
+
+.green {
+    color: #68CC45;
+}
+
+.blue {
+    color: #007AFF;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Contact Page ------------------------------------------------------------------------------*/
+
+#contactUsTitle, #aboutUsTitle, #shopTitle {
+    height: 15%;
+    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactUsTitle > p, #aboutUsTitle > p, #shopTitle > p {
+    font-size: 6em;
+    font-weight: 550;
+    background: -webkit-linear-gradient(left, black, #e8e8e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#supportOptions {
+    height: 25%;
+    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+}
+
+#password, #repair, #billing {
+    height: 10em;
+    width: 20em;
+    border-radius: 1em;
+    border: 1px solid transparent;
+    background-color: #e6e6e6;
+    box-shadow: 10px 10px 5px #cccccc;
+    transition: 500ms ease;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1.5em 1em 1.5em;
+}
+
+#password:hover, #repair:hover, #billing:hover {
+    height: 11em;
+    width: 22em;
+    transition: 500ms ease;
+}
+
+.supportOptionsIcon {
+    flex: 2.5;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: .5em;
+    font-size: 2.5em;
+}
+
+.supportOptionsText {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sendQuery {
+    height: 35em;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5em 3.5em 2.5em 3.5em;
+    gap: 1.5em;
+    background-color: black;
+    color: white;
+}
+
+#queryFormTitle {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 3em;
+    font-weight: 650;
+}
+
+#queryForm {
+    flex: 3;
+}
+
+#queryForm > form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+#nameAndEmail {
+    flex: 1;
+    display: flex;
+    gap: 3em;
+}
+
+#nameAndEmail > input {
+    height: 100%;
+    width: 27em;
+    padding-left: 1.3em;
+    letter-spacing: .1em;
+    border-radius: 8px;
+}
+
+#nameAndEmail > input::placeholder {
+    font-size: 1.3em;
+}
+
+#message {
+    flex: 3;
+    padding: 1.3em 0em 0em 1.3em;
+    border-radius: 8px;
+}
+
+#message::placeholder {
+    font-size: 1.3em;
+    letter-spacing: .1em;
+}
+
+#sendButton {
+    flex: 1;
+    width: 13%;
+    border-radius: 8px;
+    letter-spacing: .1em;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+
+#sendButton:hover {
+    border: 1px solid white;
+    background-color: #262626;
+    color: white;
+    transition: 300ms ease;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+/*About Us Page -----------------------------------------------------------------------------*/
+
+#background {
+    height: 45%;
+    display: flex;
+    margin-top: 5em;
+}
+
+#backgroundImage, #backgroundText {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#backgroundImage > img {
+    height: 100%;
+    width: auto;
+    margin-left: 15em;
+    border-radius: 8px;
+}
+
+#backgroundText {
+    flex-direction: column;
+    gap: 1.5em;
+    line-height: 1.5em;
+    letter-spacing: .05em;
+    padding-right: 5em;
+}
+
+#backgroundText > p > span {
+    font-weight: 650
+}
+
+
+#timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+    background-color: black;
+    border-radius: 2em;
+}
+
+#timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 50%;
+    animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+    0% {
+        height: 0%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    border-radius: 5em;
+}
+
+.text-box {
+    padding: 20px 30px;
+    background: white;
+    color: black;
+    position: relative;
+    border-radius: 8px;
+    font-size: 15px;
+    display: flex;
+    gap: .5em;
+    flex-direction: column;
+}
+
+.left-container {
+    left: 0;
+}
+
+.left-container::after {
+    content: '';
+    position: absolute;
+    width: 3.5em;
+    height: 2px;
+    background-color: white;
+    top: 50%;
+    left: 91%;
+    animation: movebranch 2s linear forwards;
+}
+
+@keyframes movebranch {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 3.5em;
+    }
+}
+
+.right-container {
+    left: 50%;
+}
+
+.right-container::before {
+    content: '';
+    position: absolute;
+    width: 3.5em;
+    height: 2px;
+    background-color: white;
+    top: 50%;
+    right: 90.5%;
+    animation: movebranch 2s linear forwards;
+}
+
+.container:nth-child(1)::after {
+    animation-duration: 2s;
+}
+
+.container:nth-child(4)::before {
+    animation-duration: 3s;
+}
+
+.container:nth-child(5)::after {
+    animation-duration: 3.5s;
+}
+
+.container:nth-child(6)::before {
+    animation-duration: 4s;
+}
+
+.container:nth-child(7)::after {
+    animation-duration: 4.5s;
+}
+ 
+.container img {
+    background-color: white;
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -40px;
+    top: 40px;
+    z-index: 10;
+}
+
+.right-container img {
+    left: -40px;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+/*Shop Page ---------------------------------------------------------------------------------*/
+
+#apple, #macintosh, #remaining {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+}
+
+.product {
+    height: 80%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    cursor: pointer;
+}
+
+#apple1 > img, #apple2 > img, #macintosh128k > img, #macintoshLc > img, #macintoshPortable > img, #powerBook > img, #newtonMessagePad > img  {
+    height: 60%;
+}
+
+.productTitle {
+    position: relative;
+}
+
+.productTitle::after {
+    content: '';
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 300ms ease;
+}
+
+.product:hover .productTitle::after {
+    transform: scaleX(1);
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Product Pages -----------------------------------------------------------------------------*/
+
+.productTemplate {
+    height: 50%;
+    margin-top: 5em;
+    display: flex;
+    padding: 2em;
+}
+
+.productImage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productInformation {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 2em;
+    padding: 0em 2.5em 0em 2.5em;;
+}
+
+.productName {
+    letter-spacing: .1em;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.productDescription {
+    letter-spacing: .1em;
+    line-height: 1.1em;
+}
+
+.productInformation > button {
+    height: 3.5em;
+    width: 10em;
+    border: transparent;
+    background-color: transparent;
+    border-radius: 8px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    transition: 300ms ease;
+    letter-spacing: .1em;
+}
+
+.productInformation > button:hover {
+    background-color: black;
+    color: white;
+    transition: 300ms ease;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Footer ------------------------------------------------------------------------------------*/
+
+#footer {
+    height: 23.5%;
+    background-color: #F5F5F7;
+    display: flex;
+    flex-direction: column; 
+    padding-top: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: .7em;
+}
+
+#appleLogo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5em;
+    gap: .7em;
+}
+
+#appleLogo > ion-icon {
+    font-size: 1.7em;
+}
+
+#appleLogo > p {
+    font-size: 1.2em;
+}
+
+#shortcuts {
+    flex: 2;
+}
+
+
+#shortcuts > menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 5em;
+}
+
+#shortcuts > menu > li > a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 1.2em;
+}
+
+/*Underline animation*/
+#shortcuts > menu > li > a::before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 300ms ease;
+}
+
+#shortcuts > menu > li > a:hover::before {
+    transform: scaleX(1);
+}
+#copyright {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Media Queries -> 1024px -------------------------------------------------------------------*/
+
+@media screen and (max-width: 1024px) {
+    #sendButton {
+        width: 15%;
+    }
+
+    .left-container::after {
+        left: 89%;
+    }
+
+    .right-container::before {
+        right: 89%;
+    }
+
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Media Queries -> 768px --------------------------------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+    #sendButton {
+        width: 18%;
+    }
+
+    #backgroundImage > img {
+        margin-left: 0%;
+    }
+
+    #backgroundText {
+        padding-right: 1em;
+    }
+
+    .left-container::after {
+        left: 85%;
+    }
+
+    .right-container::before {
+        right: 85%;
+    }
+
+    .productImage > img {
+        height: 50%;
+    }
+
+    #productsTemplate {
+        gap: 2em;
+    }
+
+    .products > a > img{
+        height: 8em;
+        width: auto;
+    }
+
+    #reviews {
+        padding: 1em 2em 1em 2em;
+    }
+
+    .reviewName {
+        text-align: center;
+    }
+
+    #services {
+        padding: 2em;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Media Queries -> 426px --------------------------------------------------------------------*/
+
+@media screen and (max-width: 426px) {
+    #header {
+        height: 25%;
+    }
+    
+    #navBar {
+        flex: 1;
+        font-size: 0.8em;
+    }
+
+    #nameAndLogo {
+        flex: 1;
+        font-size: 1.8em;
+    }
+
+    #contactUsTitle > p {
+        font-size: 3.8em;
+    }
+
+    #supportOptions {
+        height: 50%;
+        flex-direction: column;
+    }
+
+    #sendQuery {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #queryFormTitle {
+        text-align: center;
+    }
+
+    #password, #repair, #billing {
+        height: 8em;
+        width: 16em;
+    }
+
+    #sendQuery {
+        height: 40em;
+    }
+
+    #queryForm {
+        flex: 4;
+    }
+
+    #nameAndEmail {
+        flex-direction: column;
+        gap: 0;
+        flex: 1.7;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nameAndEmail > input {
+        flex: 1;
+        width: 20em;
+        height: 15em;
+    }
+
+    #sendButton {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #backgroundImage > img {
+        height: 60%;
+    }
+
+    #backgroundText > p {
+        letter-spacing: 0.05;
+        line-height: 1em;
+        font-size: .7em;
+        margin-left: .5em;
+    }
+
+    #timeline {
+        margin: 50px auto;
+    }
+
+    #timeline::after {
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+    .right-container {
+        left: 0;
+    }
+
+    .right-container::before {
+        right: 79%;
+    }
+
+    .left-container::after {
+        left: 8%;
+        background-color: white;
+    }
+
+    .productTemplate {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #footer {
+        height: 20%;
+        padding: 0;
+    }
+
+    #shortcuts > menu {
+        gap: 2em;
+    }
+
+    #copyright > p {
+        font-size: 0.6em;
+        margin-bottom: 1em;
+    }
+
+    #apple {
+        flex-direction: column;
+        height: 45%;
+    }
+
+    #macintosh {
+        flex-direction: column;
+        height: 80%;
+    }
+
+    #remaining {
+        flex-direction: column;
+        height: 50%;
+    }
+
+    .product {
+        width: 85%;
+        height: 15em;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #introText {
+        font-size: 2em;
+    }
+
+    #productsTemplate {
+        flex-direction: column;
+        height: 50em;
+    }
+
+    #reviews {
+        flex-direction: column;
+        height: 40em;
+    }
+
+    #services {
+        flex-direction: column;
+        height: 30em;
+    }
+
+}
+
+/*-------------------------------------------------------------------------------------------*/

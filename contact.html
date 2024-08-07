@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    <meta title="Home Page">
+    <meta name="description" content="Discover the wide variety of Apple products before 1994.">
+
+    <!--Jquery Link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!--Custom JS File-->
+    <script type="text/javascript" src="./JS/index.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <section id="contactUsTitle">
+        <p>Apple Support</p>
+    </section>
+    <section id="supportOptions">
+        <div id="password">
+            <div class="supportOptionsIcon"><ion-icon name="finger-print-outline"></ion-icon></div>
+            <div class="supportOptionsText"><p class="underline">Forgot Apple ID password</p></div>
+        </div>
+        <div id="repair">
+            <div class="supportOptionsIcon"><ion-icon name="build-outline"></ion-icon></div>
+            <div class="supportOptionsText"><p class="underline">Apple Repair</p></div>
+        </div>
+        <div id="billing">
+            <div class="supportOptionsIcon"><ion-icon name="card-outline"></ion-icon></div>
+            <div class="supportOptionsText"><p class="underline">Billing and subscriptions</p></div>
+        </div>
+    </section>
+    <section id="sendQuery">
+        <div id="queryFormTitle"><p>What's on your mind?</p></div>
+        <div id="queryForm">
+            <form action="" method="post">
+                <div id="nameAndEmail">
+                    <input id="name" type="text" name="name" placeholder="Your Name" required>
+                    <input id="email" type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <textarea name="message" id="message" rows="7" required placeholder="Message"></textarea>
+                <input type="submit" value="SEND" id="sendButton">
+            </form>
+        </div>
+    </section>
+    <footer id="footer"></footer>
+</body>
+</html>
+
+<!--The Apple Products that will be used: 
+1. Apple I (1976)
+2. Apple II Series (1977-1993): Apple II, Apple II Plus, Apple IIe, Apple IIc, Apple IIGS
+3. Macintosh 128K (1984)
+4. Macintosh Portable (1989)
+5. Macintosh LC Series (1990-1994)
+6. PowerBook 100 (1991)
+7. Newton MessagePad (1993)-->
